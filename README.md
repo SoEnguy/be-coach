@@ -1,5 +1,7 @@
 be-coach
 
+Pour l'équipe Intégration : 
+
 Une fois situé dans le dossier du projet : 
 
 bundle install 
@@ -27,6 +29,9 @@ git push
 > Envoie toutes les modifications sur le github
 
 
+Pour l'équipe Dev : 
+
+foreman start
 
 ========
 Erreurs connues : 

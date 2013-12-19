@@ -10,6 +10,13 @@
   <%= @challenge.text %>
 </p>
 
+<h2>Steps</h2>
+<ul>
+	<% @challenge.steps.each do |step| %>
+	<li><%= step.name %></li>
+	<% end %>
+</ul>
+
 
 <%= link_to 'Edit', edit_challenge_path(@challenge) %> |
 <%= link_to 'Back', challenges_path %>

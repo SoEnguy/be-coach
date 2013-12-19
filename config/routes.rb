@@ -1,4 +1,7 @@
 BeCoach::Application.routes.draw do
+  resources :steps
+
+
   resources :challenges
 
 

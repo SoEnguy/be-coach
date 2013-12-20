@@ -9,6 +9,7 @@ gem 'sorcery'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'foreman', '0.61'
 end
 
 group :production do

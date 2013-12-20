@@ -34,7 +34,4 @@ BeCoach::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-
-  FACEBOOK_APP_ID = 'KEYKEYKEY'
-  FACEBOOK_SECRET = 'KEYKEYKEY'
 end

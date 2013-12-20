@@ -1,3 +1,8 @@
-<%= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook) %>
-
 <p id="notice"><%= notice %></p>
+
+<% if current_user %>
+  <p>Connecté</p>
+<% else %>
+	<% fb_connect_logo = image_tag "fb_connect.png" %>
+	<%= link_to fb_connect_logo, auth_at_provider_path(:provider => :facebook) %>
+<% end %>

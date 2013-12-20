@@ -31,7 +31,7 @@ git push
 
 Pour l'équipe Dev : 
 
-foreman start
+Fichier d'environnement à dupliquer, Clés facebook à rentrer manuellement en local > config/environments : development.rb.example
 
 ========
 Erreurs connues : 

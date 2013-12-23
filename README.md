@@ -11,19 +11,16 @@ rails server
 > Lance le serveur en local
 
 rake db:migrate
->Permet d'importer la database
+> Permet d'importer la database
 
 Puis 0.0.0.0:3000 ou localhost:3000 dans le navigateur pour accéder au local
 
 N'oubliez pas de faire la commande 'git pull' dans le dossier du projet pour récupérer les dernières modifications ajoutées
 
-Pour push : 
+Pour mettre les modifs sur le serveur GitHub : 
 
-Si vous avez ajouté de nouveaux fichiers (sinon sauter la première commande) : 
-git add *
-
-git commit -am "nom_du_commit"
-> Créer le commit. En nom de commit mettre un nom court et pertinent. (exemple : vous avez modifié le css concernant les users, la commande sera 'git commit -am "css users"')
+git commit -am "commentaire_du_commit"
+> Créer le commit. En nom de commit mettre un nom court et pertinent. On répond à la question "Pourquoi ?" dans le commentaire (exemple : vous avez modifié le css concernant un bug d'affichage au hover des liens, la commande sera 'git commit -am "Hover links fix"').
 
 git push
 > Envoie toutes les modifications sur le github
@@ -32,6 +29,10 @@ git push
 Pour l'équipe Dev : 
 
 foreman start
+> Lancer le serveur
+
+Consulter la doc des gems
+> http://rubydoc.info/gems/***laGem***
 
 ========
 Erreurs connues : 

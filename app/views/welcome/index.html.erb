@@ -3,10 +3,6 @@
 <% if current_user %>
 	<%= link_to('Challenges', challenges_path) %>
 <% else %>
-<<<<<<< HEAD
-=======
 	<h1>Connexion</h1>
-	<% fb_connect_logo = image_tag "fb_connect.png" %>
->>>>>>> 57967a2735d0c1f4a26e45f5ab706f45cc96262f
 	<%= link_to fb_connect_logo, auth_at_provider_path(:provider => :facebook) %>
 <% end %>

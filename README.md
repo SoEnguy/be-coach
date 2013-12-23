@@ -33,6 +33,16 @@ foreman start
 
 Consulter la doc des gems
 > http://rubydoc.info/gems/***laGem***
+=======
+foreman start pour lancer le serveur local
+
+3 KEYS dans le .env : 
+FACEBOOK_APP_ID
+FACEBOOK_KEY
+FACEBOOK_CALLBACK_URL
+
+Pour les remplir, se baser sur le .env.exemple
+Prendre les clés dans le Facebook Developpers
 
 ========
 Erreurs connues : 

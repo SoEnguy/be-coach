@@ -35,19 +35,19 @@ class Ability
     else
       can :read, :all
       can :complete, Steps # TODO : Il faudra veillez à créer le back-end de la complétion.
-      if user.role?(:member)
+      if user.role? :member
         can :create, :all
         can :delete, Challenges do |challenge|
-          challenge.try(:user) == user
+          challenge.try :user == user
         end
         can :update, Challenges do |challenge|
-          challenge.try(:user) == user
+          challenge.try :user == user
         end
         can :delete, Steps do |step|
-          step.try(:user) == user
+          step.try :user == user
         end
         can :update, Steps do |step|
-          step.try(:user) == user
+          step.try :user == user
         end
       end
     end

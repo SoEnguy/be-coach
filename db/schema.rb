@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131220111627) do
+ActiveRecord::Schema.define(:version => 20131224123603) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false

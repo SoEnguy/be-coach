@@ -4,5 +4,5 @@
 	<%= link_to('Challenges', challenges_path) %>
 <% else %>
 	<h1>Connexion</h1>
-	<%= link_to fb_connect_logo, auth_at_provider_path(:provider => :facebook) %>
+	<%= link_to auth_at_provider_path(:provider => :facebook) %>
 <% end %>

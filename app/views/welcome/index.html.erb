@@ -1,9 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Devenez votre propre coach</h2>
+<div>
+	<p>BeCoach est une application qui vous permet 
+	d'accéder à une liste de challenges à réaliser parmi un grand nombre de thèmes différents. </p>
+	<p>Accomplissez des défis, essayez vous à de nouveaux hobbies et partagez vos succès sur Facebook pour impressionner vos amis. </p>
+	<p>BeCoach, une application simple et efficace pour 
+	améliorer votre vie.</p>
+</div>
 <% if current_user %>
   <p>Connecté</p>
 <% else %>
-	<h1>Connexion</h1>
 	<% fb_connect_logo = image_tag "fb_connect.png" %>
 	<%= link_to fb_connect_logo, auth_at_provider_path(:provider => :facebook) %>
 <% end %>

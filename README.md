@@ -52,6 +52,6 @@ Prendre les clés dans le Facebook Developpers
 ========
 Erreurs connues : 
 
-Erreur execjs runtime error sur windows 8 : installer nodeJS pour r�soudre le probl�me.
+Erreur execjs runtime error sur windows 8 : installer nodeJS pour résoudre le problème.
 
 ========

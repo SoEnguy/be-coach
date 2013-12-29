@@ -1,8 +1,8 @@
 be-coach
 
-Pour l'équipe Intégration : 
+Pour l'ï¿½quipe Intï¿½gration : 
 
-Une fois situé dans le dossier du projet : 
+Une fois situï¿½ dans le dossier du projet : 
 
 bundle install 
 > Permet d'installer les gems
@@ -13,20 +13,25 @@ rails server
 rake db:migrate
 > Permet d'importer la database
 
-Puis 0.0.0.0:3000 ou localhost:3000 dans le navigateur pour accéder au local
+Puis 0.0.0.0:3000 ou localhost:3000 dans le navigateur pour accï¿½der au local
 
-N'oubliez pas de faire la commande 'git pull' dans le dossier du projet pour récupérer les dernières modifications ajoutées
+N'oubliez pas de faire la commande 'git pull' dans le dossier du projet pour rï¿½cupï¿½rer les derniï¿½res modifications ajoutï¿½es
 
 Pour mettre les modifs sur le serveur GitHub : 
 
+ (sinon sauter la premiÃ¨re commande) :
+
+git add .
+> Utile si vous avez ajoutÃ© de nouveaux fichiers pour les rÃ©fÃ©rencer sur git.
+
 git commit -am "commentaire_du_commit"
-> Créer le commit. En nom de commit mettre un nom court et pertinent. On répond à la question "Pourquoi ?" dans le commentaire (exemple : vous avez modifié le css concernant un bug d'affichage au hover des liens, la commande sera 'git commit -am "Hover links fix"').
+> Crï¿½er le commit. En nom de commit mettre un nom court et pertinent. On rï¿½pond ï¿½ la question "Pourquoi ?" dans le commentaire (exemple : vous avez modifiï¿½ le css concernant un bug d'affichage au hover des liens, la commande sera 'git commit -am "Hover links fix"').
 
 git push
 > Envoie toutes les modifications sur le github
 
 
-Pour l'équipe Dev : 
+Pour l'ï¿½quipe Dev : 
 
 foreman start
 > Lancer le serveur
@@ -42,11 +47,11 @@ FACEBOOK_KEY
 FACEBOOK_CALLBACK_URL
 
 Pour les remplir, se baser sur le .env.exemple
-Prendre les clés dans le Facebook Developpers
+Prendre les clï¿½s dans le Facebook Developpers
 
 ========
 Erreurs connues : 
 
-Erreur execjs runtime error sur windows 8 : installer nodeJS pour résoudre le problème.
+Erreur execjs runtime error sur windows 8 : installer nodeJS pour rï¿½soudre le problï¿½me.
 
 ========

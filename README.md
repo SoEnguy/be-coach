@@ -1,8 +1,8 @@
 be-coach
 
-Pour l'�quipe Int�gration : 
+Pour l'équipe Intégration : 
 
-Une fois situ� dans le dossier du projet : 
+Une fois situé dans le dossier du projet : 
 
 bundle install 
 > Permet d'installer les gems
@@ -13,9 +13,9 @@ rails server
 rake db:migrate
 > Permet d'importer la database
 
-Puis 0.0.0.0:3000 ou localhost:3000 dans le navigateur pour acc�der au local
+Puis 0.0.0.0:3000 ou localhost:3000 dans le navigateur pour accéder au local
 
-N'oubliez pas de faire la commande 'git pull' dans le dossier du projet pour r�cup�rer les derni�res modifications ajout�es
+N'oubliez pas de faire la commande 'git pull' dans le dossier du projet pour récupérer les derni�res modifications ajoutées
 
 Pour mettre les modifs sur le serveur GitHub : 
 
@@ -25,13 +25,13 @@ git add .
 > Utile si vous avez ajouté de nouveaux fichiers pour les référencer sur git.
 
 git commit -am "commentaire_du_commit"
-> Cr�er le commit. En nom de commit mettre un nom court et pertinent. On r�pond � la question "Pourquoi ?" dans le commentaire (exemple : vous avez modifi� le css concernant un bug d'affichage au hover des liens, la commande sera 'git commit -am "Hover links fix"').
+> Créer le commit. En nom de commit mettre un nom court et pertinent. On répond à la question "Pourquoi ?" dans le commentaire (exemple : vous avez modifié le css concernant un bug d'affichage au hover des liens, la commande sera 'git commit -am "Hover links fix"').
 
 git push
 > Envoie toutes les modifications sur le github
 
 
-Pour l'�quipe Dev : 
+Pour l'équipe Dev : 
 
 foreman start
 > Lancer le serveur
@@ -47,7 +47,7 @@ FACEBOOK_KEY
 FACEBOOK_CALLBACK_URL
 
 Pour les remplir, se baser sur le .env.exemple
-Prendre les cl�s dans le Facebook Developpers
+Prendre les clés dans le Facebook Developpers
 
 ========
 Erreurs connues : 

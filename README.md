@@ -15,7 +15,7 @@ rake db:migrate
 
 Puis 0.0.0.0:3000 ou localhost:3000 dans le navigateur pour accéder au local
 
-N'oubliez pas de faire la commande 'git pull' dans le dossier du projet pour récupérer les derni�res modifications ajoutées
+N'oubliez pas de faire la commande 'git pull' dans le dossier du projet pour récupérer les dernières modifications ajoutées
 
 Pour mettre les modifs sur le serveur GitHub : 
 

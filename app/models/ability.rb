@@ -29,12 +29,14 @@ class Ability
     # See the wiki for details:
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
     user ||= User.new # guest user
+    user = User.find(1) # Temporary, force to give admin rights
+    user.add_role :admin # Temporary, force to give admin rights
 
     if user.has_role? :admin
       can :manage, :all
     else
       can :read, :all
-      #can :complete, Steps // TODO : Il faudra veillez à créer le back-end de la complétion. (Je sais pas où).
+      # can :complete, Steps // TODO : Not a default action, need to be create somewhere (don't know where yet).
       if user.has_role? :member
         can :create, :all
         can :delete, Challenges do |challenge|

@@ -412,8 +412,6 @@ Rails.application.config.sorcery.configure do |config|
     #
     user.authentications_class = Authentication
 
-    user.role = "admin"
-
     # User's identifier in authentications class.
     # Default: `:user_id`
     #

@@ -103,6 +103,7 @@ GEM
     rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
+    rolify (3.2.0)
     sass (3.2.13)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -127,6 +128,7 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    win32console (1.3.2)
     win32console (1.3.2-x86-mingw32)
 
 PLATFORMS
@@ -140,6 +142,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.13)
   rails_12factor
+  rolify
   sass-rails (~> 3.2.3)
   sorcery
   sqlite3

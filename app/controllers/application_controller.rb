@@ -2,5 +2,5 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :require_login
   
-	check_authorization :if => "admin"
+	authorize_resource :class => UsersController
 end

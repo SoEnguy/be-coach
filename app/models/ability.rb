@@ -30,12 +30,12 @@ class Ability
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
     user ||= User.new # guest user
 
-    if user.role? :admin
+    if user.has_role? :admin
       can :manage, :all
     else
       can :read, :all
-      can :complete, Steps # TODO : Il faudra veillez à créer le back-end de la complétion.
-      if user.role? :member
+      #can :complete, Steps // TODO : Il faudra veillez à créer le back-end de la complétion. (Je sais pas où).
+      if user.has_role? :member
         can :create, :all
         can :delete, Challenges do |challenge|
           challenge.try :user == user

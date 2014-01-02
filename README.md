@@ -24,8 +24,8 @@ Pour mettre les modifs sur le serveur GitHub :
 git add .
 > Utile si vous avez ajouté de nouveaux fichiers pour les référencer sur git.
 
-git commit -am "commentaire_du_commit"
-> Créer le commit. En nom de commit mettre un nom court et pertinent. On répond à la question "Pourquoi ?" dans le commentaire (exemple : vous avez modifié le css concernant un bug d'affichage au hover des liens, la commande sera 'git commit -am "Hover links fix"').
+git commit -a -m "commentaire_du_commit"
+> Créer le commit. En nom de commit mettre un nom court et pertinent. On répond à la question "Pourquoi ?" dans le commentaire (exemple : vous avez modifié le css concernant un bug d'affichage au hover des liens, la commande sera 'git commit -a -m "Hover links fix"').
 
 git push
 > Envoie toutes les modifications sur le github

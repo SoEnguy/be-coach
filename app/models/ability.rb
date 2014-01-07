@@ -28,8 +28,7 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
-    user ||= User.new # guest user
-    user = User.find(1) # Temporary, force to give admin rights
+    User.find(1) ||= User.new # guest user | Temporary, forced to give admin rights
     user.add_role :admin # Temporary, force to give admin rights
 
     if user.has_role? :admin

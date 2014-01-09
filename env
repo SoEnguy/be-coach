@@ -1,0 +1,3 @@
+FACEBOOK_APP_ID=1432443440306815
+FACEBOOK_SECRET=42e8aa750c285dd5a69d7c17fa67703c
+FACEBOOK_CALLBACK_URL="http://localhost:3000/oauths/callback?provider=facebook"

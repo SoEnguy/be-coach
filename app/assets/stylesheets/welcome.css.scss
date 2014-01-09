@@ -10,23 +10,39 @@ body {
 
 h1 {
 	color: #fff;
+	margin: 50px;
+	font-size: 50px;
+	text-align: center;
 }
 
 div#main {
 	background: #fff;
 	width: 100%;
 	padding-top: 10px;
+	padding-bottom: 50px;
+}
+
+div#presentation {
+	margin-left: 45%;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+
+h2 {
+	text-align: center;
+	font-size: 45px;
 }
 
 a {
 	text-decoration: none;
-	color: #FFF;
+	color: #000;
 }
 
 nav ul {
 	width: 100%;
-	height: 40px;
+	height: 50px;
 	margin-bottom: 0px;
+	margin-left: 15%;
 }
 
 nav ul li {
@@ -35,8 +51,8 @@ nav ul li {
 }
 
 nav ul li a {
-	width: 200px;
-	height: 40px;
+	width: 250px;
+	height: 50px;
 	text-align: center;
 	background: #2aa48e;
 	display: inline-block;
@@ -44,13 +60,16 @@ nav ul li a {
 
 nav ul li a p {
 	position: relative;
-	margin-top: 10px;
+	margin-top: 15px;
+	font-size: 25px;
+	color: #fff;
 }
 
 p#mascotte img {
-	width: 150px;
-	height: 200px;
+	width: 250px;
+	height: 300px;
 	float: left;
+	margin-left: 25%;
 }
 
 nav ul li a.active {
@@ -61,3 +80,9 @@ p#orange {
 	color: #ef784a;
 }
 
+p#notice {
+	margin-top: 40px;
+	font-size: 17px;
+	text-align: center;
+	color: #fff;
+}

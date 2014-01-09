@@ -1,16 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="content">
+	<h1>Be Coach</h1>
+	<nav>
+		<ul>
+			<li><a href="#" class="active"><p>Home</p></a></li>
+			<li><a href="#"><p>S'inscrire</p></a></li>
+			<li><a href="#"><p>Connexion</p></a></li>
+			<li><a href="#"><p>FAQ</p></a></li>
+		</ul>
+	</nav>
 
-<h2>Devenez votre propre coach</h2>
-<div>
-	<p>BeCoach est une application qui vous permet 
-	d'accéder à une liste de challenges à réaliser parmi un grand nombre de thèmes différents. </p>
-	<p>Accomplissez des défis, essayez vous à de nouveaux hobbies et partagez vos succès sur Facebook pour impressionner vos amis. </p>
-	<p>BeCoach, une application simple et efficace pour 
-	améliorer votre vie.</p>
+	
+
+	<div id="main">
+		<h2>Devenez votre propre coach</h2>
+		<p id="mascotte">
+			<img src="/images/pandacoach.png">
+		</p>
+		<div id="presentation">
+			<p>BeCoach est une application qui vous permet 
+			d'accéder à une liste de challenges à réaliser parmi un grand nombre de thèmes différents. </p>
+			<p id="orange">Accomplissez des défis, essayez vous à de nouveaux hobbies et partagez vos succès sur Facebook pour impressionner vos amis. </p>
+			<p>BeCoach, une application simple et efficace pour 
+			améliorer votre vie.</p>
+		</div>
+		<% if current_user %>
+		  <p>Connecté</p>
+		<% else %>
+			<div id="connect">
+				<% fb_connect_logo = image_tag "fb_connect.png" %>
+				<%= link_to fb_connect_logo, auth_at_provider_path(:provider => :facebook) %>
+			</div>
+		<% end %>	
+	</div>
+	<p id="notice"><%= notice %></p>	
 </div>
-<% if current_user %>
-  <p>Connecté</p>
-<% else %>
-	<% fb_connect_logo = image_tag "fb_connect.png" %>
-	<%= link_to fb_connect_logo, auth_at_provider_path(:provider => :facebook) %>
-<% end %>

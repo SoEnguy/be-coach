@@ -14,14 +14,14 @@ body {
 
 h1 {
 	color: #fff;
-	margin: 50px;
+	margin: 45px;
 	font-size: 50px;
 	text-align: center;
 }
 
 h2 {
 	text-align: center;
-	font-size: 45px;
+	font-size: 43px;
 	padding: 30px;
 
 }
@@ -100,16 +100,21 @@ p#orange {
 	color: #ef784a;
 }
 
-div#footer {
+#footer {
 	margin-top: 25px;
 	font-size: 17px;
 	text-align: center;
 	color: #fff;
-	display: inline-block;
 	width: 100%;
 }
 
-div#social {
+#social {
 	float: right;
 	margin-right: 15%;
+	margin-top: -50px;
+}
+
+#social img {
+	height: 40%;
+	width: 40%;
 }

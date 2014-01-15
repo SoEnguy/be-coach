@@ -1,5 +1,6 @@
 class Step < ActiveRecord::Base
-  resoucify
+  resourcify
   belongs_to :challenge
-  attr_accessible :name, :text, :challenge_id
+  belongs_to :user
+  attr_accessible :id, :name, :text, :challenge_id
 end

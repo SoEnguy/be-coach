@@ -2,6 +2,7 @@
 
 <% if current_user %>
 	<%= link_to('Challenges', challenges_path) %>
+	<%= current_user.username %>
 <% else %>
 	<h1>Connexion</h1>
 	<%= link_to auth_at_provider_path(:provider => :facebook) %>

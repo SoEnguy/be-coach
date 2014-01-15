@@ -1,9 +1,10 @@
 class User < ActiveRecord::Base
+  rolify
   authenticates_with_sorcery! do |config|
     config.authentications_class = Authentication
   end
   
-  attr_accessible :email, :password, :password_confirmation, :username, :authentications_attributes
+  attr_accessible :id, :email, :password, :password_confirmation, :username, :authentications_attributes
 
   validates :password, length: { minimum: 3 }
   validates :password, confirmation: true
@@ -11,6 +12,8 @@ class User < ActiveRecord::Base
 
   validates :username, uniqueness: true
   validates :email, uniqueness: true
+
+  has_many :step
 
   has_many :authentications, :dependent => :destroy
   accepts_nested_attributes_for :authentications

@@ -6,7 +6,15 @@ class OauthsController < ApplicationController
   def oauth
     login_at(params[:provider])
   end
-      
+  
+  def logout
+    if logged_in?
+      reset_session
+      @current_user = nil
+    end
+    redirect_to root_path
+  end
+
   def callback
     provider = params[:provider]
     if @user = login_from(provider)

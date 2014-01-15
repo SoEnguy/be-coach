@@ -2,26 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
-
-
-body {
-	background: #383838;
-	margin: 0px;
-	width: 100%;
-	font-family: 'Montserrat';
-	}
-
-h1 {
-	color: #fff;
-	margin: 50px;
-	font-size: 50px;
-	text-align: center;
-}
-
 h2 {
 	text-align: center;
-	font-size: 45px;
+	font-size: 43px;
 	padding: 30px;
 
 }
@@ -38,53 +21,10 @@ div#presentation {
 	margin-bottom: 50px;
 	margin-top: 20px;
 }
-
-div#connect {
-	margin-left: 45%;
-}
-
+	
 a {
 	text-decoration: none;
 	color: #000;
-}
-
-a.active:hover,
-a:hover {
-	background-color: transparent;
-}
-
-nav ul {
-	width: 95%;
-	height: 50px;
-	margin-bottom: 0px;
-	text-align: center;
-}
-
-nav ul li {
-	list-style: none;
-	display: inline;
-
-}
-
-nav ul li a {
-	width: 250px;
-	height: 50px;
-	text-align: center;
-	background: #2aa48e;
-	display: inline-block;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-	margin: 0px 2px 0px 2px;
-
-}
-
-nav ul li a p {
-	position: relative;
-	margin-top: 15px;
-	font-size: 28px;
-	color: #fff;
-
 }
 
 p#mascotte img {
@@ -94,24 +34,7 @@ p#mascotte img {
 	margin-left: 25%;
 }
 
-nav ul li a.active {
-	background: #ef784a;
-}
 
 p#orange {
 	color: #ef784a;
-}
-
-div#footer {
-	margin-top: 25px;
-	font-size: 17px;
-	text-align: center;
-	color: #fff;
-	display: inline-block;
-	width: 100%;
-}
-
-div#social {
-	float: right;
-	margin-right: 15%;
 }

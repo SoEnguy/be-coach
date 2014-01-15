@@ -20,6 +20,7 @@ body {
 	width: 100%;
 	font-family: 'Montserrat';
 }
+/* Header properties */
 header h1 {
 	color: #fff;
 	margin: 45px;
@@ -63,6 +64,19 @@ nav ul li a:visited {
 	background-color: transparent;
 }
 
+/* Container */
+#main {
+	background: #fff;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+#container {
+	width: 960px;
+	margin: auto;
+}
+
+/* Footer Properties */ 
 #footer {
 	margin-top: 25px;
 	font-size: 17px;

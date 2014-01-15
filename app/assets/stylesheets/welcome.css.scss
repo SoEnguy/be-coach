@@ -8,16 +8,12 @@ h2 {
 	padding: 30px;
 
 }
-
-div#main {
-	background: #fff;
-	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 50px;
+h3 {
+	font-size: 25px;
 }
-
+/* Index.html */
 div#presentation {
-	margin-left: 45%;
+	margin-left: 50%;
 	margin-bottom: 50px;
 	margin-top: 20px;
 }
@@ -31,10 +27,25 @@ p#mascotte img {
 	width: 250px;
 	height: 300px;
 	float: left;
-	margin-left: 25%;
+	margin-left: 20%;
 }
 
 
 p#orange {
 	color: #ef784a;
+}
+/* FAQ */
+.ensemble {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 3%;
+}
+.ensemble p:first-child {
+	font-size: 16px;
+}
+.ensemble p:last-child {
+	margin-left: 3%;
+}
+article {
+	margin-bottom: 50px;
 }

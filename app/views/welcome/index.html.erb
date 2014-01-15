@@ -4,9 +4,8 @@
 	<nav>
 		<ul>
 			<li><a href="#" class="active"><p>Home</p></a></li>
-			<li><a href="#"><p>S'inscrire</p></a></li>
-			<li><a href="#"><p>Connexion</p></a></li>
-			<li><a href="#"><p>FAQ</p></a></li>
+			<li><p><%= link_to "Connexion (facebook)", auth_at_provider_path(:provider => :facebook) %></p></li>
+			<li><p><%= link_to('FAQ', 'FAQ') %></p></li>
 		</ul>
 	</nav>
 	

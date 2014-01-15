@@ -11,3 +11,73 @@
  *= require_self
  *= require_tree .
  */
+
+ @import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+	background: #383838;
+	margin: 0px;
+	width: 100%;
+	font-family: 'Montserrat';
+}
+header h1 {
+	color: #fff;
+	margin: 45px;
+	font-size: 50px;
+	text-align: center;
+}
+
+nav ul {
+	width: 95%;
+	height: 50px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+nav ul li {
+	list-style: none;
+	display: inline-block;
+}
+
+nav ul li a:visited {
+	color: #fff;
+}
+.onglet {
+	width: 250px;
+	height: 35px;
+	text-align: center;
+	background: #2aa48e;
+	display: inline-block;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	margin: 0px 2px 0px 2px;
+	font-size: 28px;
+	color: #fff;
+	padding-top: 15px;
+}
+.active {
+	background: #ef784a;
+}
+.onglet:hover {
+	background-color: transparent;
+}
+
+#footer {
+	margin-top: 25px;
+	font-size: 17px;
+	text-align: center;
+	width: 100%;
+	color: #fff;
+}
+
+#social {
+	float: right;
+	margin-right: 15%;
+	margin-top: -50px;
+}
+
+#social img {
+	height: 40%;
+	width: 40%;
+}

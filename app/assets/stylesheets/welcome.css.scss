@@ -48,7 +48,9 @@ a {
 	color: #000;
 }
 
-a.active:hover,
+.onglet:hover {
+	background-color: transparent;
+}
 a:hover {
 	background-color: transparent;
 }
@@ -62,13 +64,15 @@ nav ul {
 
 nav ul li {
 	list-style: none;
-	display: inline;
-
+	display: inline-block;
 }
 
-nav ul li a {
+nav ul li a:visited {
+	color: #fff;
+}
+.onglet {
 	width: 250px;
-	height: 50px;
+	height: 35px;
 	text-align: center;
 	background: #2aa48e;
 	display: inline-block;
@@ -76,15 +80,12 @@ nav ul li a {
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 	margin: 0px 2px 0px 2px;
-
-}
-
-nav ul li a p {
-	position: relative;
-	margin-top: 15px;
 	font-size: 28px;
 	color: #fff;
-
+	padding-top: 15px;
+}
+.active {
+	background: #ef784a;
 }
 
 p#mascotte img {
@@ -94,9 +95,6 @@ p#mascotte img {
 	margin-left: 25%;
 }
 
-nav ul li a.active {
-	background: #ef784a;
-}
 
 p#orange {
 	color: #ef784a;

@@ -3,9 +3,11 @@
 	<h1>BeCoach</h1>
 	<nav>
 		<ul>
-			<li><a href="#" class="active"><p>Home</p></a></li>
-			<li><p><%= link_to "Connexion (facebook)", auth_at_provider_path(:provider => :facebook) %></p></li>
-			<li><p><%= link_to('FAQ', 'FAQ') %></p></li>
+			<li><div class="active onglet"><a href="#">Home</a></div></li>
+			<li><div class="onglet"><%= link_to('FAQ', 'FAQ') %></div></li>
+			<% if !current_user %>
+				<li><div class="onglet"><p><%= link_to "Connexion (facebook)", auth_at_provider_path(:provider => :facebook) %></p></div></li>
+			<% end %>
 		</ul>
 	</nav>
 	
@@ -16,21 +18,18 @@
 		<p id="mascotte">
 			<img src="assets/pandacoach.png">
 		</p>
+
 		<div id="presentation">
+			<% if current_user %>
+			  <p id="orange">Vous êtes connecté.</p><br>
+			<% end %>
 			<p>BeCoach est une application qui vous permet </br>
 			d'accéder à une liste de challenges à réaliser parmi </br> un grand nombre de thèmes différents. </p>
 			<p id="orange">Accomplissez des défis, essayez vous à de nouveaux </br> hobbies et partagez vos succès sur Facebook pour </br> impressionner vos amis. </p>
 			<p>BeCoach, une application simple et efficace pour </br>
 			améliorer votre vie.</p>
 		</div>
-		<% if current_user %>
-		  <p>Connecté</p>
-		<% else %>
-			<div id="connect">
-				<% fb_connect_logo = image_tag "fb_connect.png" %>
-				<%= link_to fb_connect_logo, auth_at_provider_path(:provider => :facebook) %>
-			</div>
-		<% end %>	
+	
 	</div>
 	<div id="footer">
 		<p>©BeCoach 2014 - Mentions Légales</p>

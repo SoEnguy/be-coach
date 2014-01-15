@@ -6,5 +6,6 @@ class CreateLinkStepsUsers < ActiveRecord::Migration
     end
     add_index :link_steps_users, :user_id
     add_index :link_steps_users, :step_id
+    add_index :link_steps_users, :isComplete
   end
 end

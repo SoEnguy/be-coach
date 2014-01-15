@@ -10,6 +10,7 @@
 	</nav>
 	
 
+<<<<<<< HEAD
 
 	<div id="main">
 		<h2>Devenez votre propre coach !</h2>
@@ -42,3 +43,12 @@
 	</div>	
 	
 </div>
+=======
+<% if current_user %>
+	<%= link_to('Challenges', challenges_path) %>
+	<%= current_user.username %>
+<% else %>
+	<h1>Connexion</h1>
+	<%= link_to auth_at_provider_path(:provider => :facebook) %>
+<% end %>
+>>>>>>> experimental

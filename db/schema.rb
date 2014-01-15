@@ -68,7 +68,10 @@ ActiveRecord::Schema.define(:version => 20140102122529) do
     t.datetime "last_logout_at"
     t.datetime "last_activity_at"
     t.string   "last_login_from_ip_address"
+<<<<<<< HEAD
     t.string   "role"
+=======
+>>>>>>> experimental
   end
 
   add_index "users", ["last_logout_at", "last_activity_at"], :name => "index_users_on_last_logout_at_and_last_activity_at"

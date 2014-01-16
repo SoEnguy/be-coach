@@ -1,0 +1,33 @@
+<%= form_for(@step_selection) do |f| %>
+  <% if @step_selection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@step_selection.errors.count, "error") %> prohibited this step_selection from being saved:</h2>
+
+      <ul>
+      <% @step_selection.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :step_id %><br />
+    <%= f.number_field :step_id %>
+  </div>
+  <div class="field">
+    <%= f.label :challenge_id %><br />
+    <%= f.number_field :challenge_id %>
+  </div>
+  <div class="field">
+    <%= f.label :isComplete %><br />
+    <%= f.check_box :isComplete %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

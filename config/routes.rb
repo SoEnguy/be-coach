@@ -1,5 +1,8 @@
 BeCoach::Application.routes.draw do
 
+  
+
+  resources :step_selections
   resources :steps
   resources :users
   resources :challenges
@@ -14,6 +17,6 @@ BeCoach::Application.routes.draw do
   get "/FAQ" => 'welcome#FAQ'
   get "/myprofile" => "profile#myprofile"
   get "/Home" => 'welcome#index'
-
+  get "/select" => 'step_selections#index'
   root :to => 'welcome#index'
 end

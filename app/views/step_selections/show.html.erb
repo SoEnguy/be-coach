@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @step_selection.user_id %>
+</p>
+
+<p>
+  <b>Step:</b>
+  <%= @step_selection.step_id %>
+</p>
+
+<p>
+  <b>Challenge:</b>
+  <%= @step_selection.challenge_id %>
+</p>
+
+<p>
+  <b>Iscomplete:</b>
+  <%= @step_selection.isComplete %>
+</p>
+
+
+<%= link_to 'Edit', edit_step_selection_path(@step_selection) %> |
+<%= link_to 'Back', step_selections_path %>

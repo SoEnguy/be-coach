@@ -1,22 +1,11 @@
-<p id="notice"><%= notice %></p>
+<%= link_to 'Accueil', challenges_path %>
 
-<p>
-  <b>Name:</b>
-  <%= @challenge.name %>
-</p>
+<h1><%= @challenge.name %></h1>
 
-<p>
-  <b>Text:</b>
-  <%= @challenge.text %>
-</p>
+<p><%= @challenge.text %></p>
 
-<h2>Steps</h2>
 <ul>
 	<% @challenge.steps.each do |step| %>
-	<li><%= step.name %></li>
+		<li><%= link_to step.name, step %></li>
 	<% end %>
 </ul>
-
-
-<%= link_to 'Edit', edit_challenge_path(@challenge) %> |
-<%= link_to 'Back', challenges_path %>

@@ -1,0 +1,40 @@
+<table>
+<tr>
+	<td>
+		<b>Name:</b>
+	</td>
+	<td>
+		<b>Text:</b>
+	</td>
+	<td>
+		<b>Steps:</b>
+	</td>
+	<td>
+		<b>Selectionner:</b>
+	</td>
+</tr>
+
+<% for challenge in @challenge_list %>
+	<tr>
+		<td>
+		  <%= challenge.name %>
+		</td>
+
+		<td>
+		  <%= challenge.text %>
+		</td>
+
+		<td>
+			<ul>
+				<% challenge.steps.each do |step| %>
+				<li><%= step.name %></li>
+				<% end %>
+			</ul>
+		</td>
+
+		<td>
+			<b>BOUTON SELECTIONNER</b>
+		</td>
+	</tr>
+<% end %>
+</table>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BeCoach</title>
+  <title>  BeCoach</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -16,6 +16,8 @@
 			<li><div class="onglet"><%= link_to('FAQ', 'FAQ') %></div></li>
 			<% if !current_user %>
 				<li><div class="onglet"><p><%= link_to "Connexion (facebook)", auth_at_provider_path(:provider => :facebook) %></p></div></li>
+			<% else %>
+				<li><div class="onglet">Déconnexion</div></li>
 			<% end %>
 		</ul>
 	</nav>
@@ -31,8 +33,8 @@
 		<p>©BeCoach 2014 - Mentions Légales</p>
 	</div>	
 	<div id="social">
-		<img src="assets/twitter.png">
-		<img src="assets/facebook.png">
+		<a href="#"><img src="assets/twitter.png"></a>
+		<a href="#"><img src="assets/facebook.png"></a>
 	</div>
 </footer>
 

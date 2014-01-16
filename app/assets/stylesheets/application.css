@@ -63,6 +63,13 @@ nav ul li a:visited {
 .onglet:hover {
 	background-color: transparent;
 }
+.onglet a {
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+}
 
 /* Container */
 #main {

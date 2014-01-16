@@ -6,6 +6,6 @@
 
 <ul>
 	<% @challenge.steps.each do |step| %>
-		<li><%= link_to step.name, step %></li>
+		<li><%= link_to step.name, do_step_path(step) %></li>
 	<% end %>
 </ul>

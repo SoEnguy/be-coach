@@ -10,6 +10,16 @@ class StepsController < ApplicationController
     end
   end
 
+  def do
+    @step = Step.find(params[:id])
+
+    current_user.step << @step
+
+    redirect_to challenge_path(@step.challenge)
+
+    #TODO : Join user and step
+    #and return to challenge
+  end
   # GET /steps/1
   # GET /steps/1.json
   def show

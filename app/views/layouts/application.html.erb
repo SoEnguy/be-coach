@@ -17,7 +17,7 @@
 			<% if !current_user %>
 				<li><div class="onglet"><%= link_to "Connexion (facebook)", auth_at_provider_path(:provider => :facebook) %></div></li>
 			<% else %>
-				<li><div class="onglet">Déconnexion</div></li>
+				<li><div class="onglet"><%= link_to "Déconnexion", "oauths/logout" %></div></li>
 			<% end %>
 		</ul>
 	</nav>

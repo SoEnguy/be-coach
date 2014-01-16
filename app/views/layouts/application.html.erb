@@ -12,7 +12,7 @@
 	<h1>BeCoach</h1>
 	<nav>
 		<ul>
-			<li><a href="#"><div class="active onglet" id="home">Home</div></a></li>
+			<li><div class="active onglet" id="home"><%= link_to('Home', 'Home') %></div></li>
 			<li><div class="onglet" id="faq"><%= link_to('FAQ', 'FAQ') %></div></li>
 			<% if !current_user %>
 				<li><div class="onglet"><%= link_to "Connexion", auth_at_provider_path(:provider => :facebook) %></div></li>

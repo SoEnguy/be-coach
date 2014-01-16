@@ -12,7 +12,8 @@ BeCoach::Application.routes.draw do
 
   get "/list_challenge" => 'list_challenge#list_challenge'
   get "/FAQ" => 'welcome#FAQ'
-  get "profile/myprofile" => "profile#myprofile"
+  get "/myprofile" => "profile#myprofile"
+  get "/Home" => 'welcome#index'
 
   root :to => 'welcome#index'
 end

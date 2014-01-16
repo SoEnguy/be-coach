@@ -1,4 +1,5 @@
 class ChallengesController < ApplicationController
+  skip_before_filter :require_login
   # GET /challenges
   # GET /challenges.json
   def index

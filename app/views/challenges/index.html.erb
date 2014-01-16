@@ -1,3 +1,7 @@
+<% if !current_user %>
+  <%= link_to "Connexion", auth_at_provider_path(:provider => :facebook) %>
+<% else %>
+
 <ul>
   <% @challenges.each do |challenge| %>
     <li><%= link_to challenge.name, challenge %></li>

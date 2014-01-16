@@ -12,7 +12,7 @@
 	<h1>BeCoach</h1>
 	<nav>
 		<ul>
-			<li><div class="active onglet" id="home"><a href="#">Home</a></div></li>
+			<li><a href="#"><div class="active onglet" id="home">Home</div></a></li>
 			<li><div class="onglet" id="faq"><%= link_to('FAQ', 'FAQ') %></div></li>
 			<% if !current_user %>
 				<li><div class="onglet"><%= link_to "Connexion", auth_at_provider_path(:provider => :facebook) %></div></li>
@@ -29,9 +29,7 @@
 	</div>
 </div>
 <footer>
-	<div id="footer">
 		<p>©BeCoach 2014 - Mentions Légales</p>
-	</div>	
 	<div id="social">
 		<a href="#"><img src="assets/twitter.png"></a>
 		<a href="#"><img src="assets/facebook.png"></a>

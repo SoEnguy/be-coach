@@ -23,7 +23,7 @@ body {
 /* Header properties */
 header h1 {
 	color: #fff;
-	margin: 45px;
+	margin: 30px;
 	font-size: 50px;
 	text-align: center;
 }
@@ -45,7 +45,7 @@ nav ul li a:visited {
 }
 .onglet {
 	width: 250px;
-	height: 35px;
+	height: 42px;
 	text-align: center;
 	background: #2aa48e;
 	display: inline-block;
@@ -55,7 +55,7 @@ nav ul li a:visited {
 	margin: 0px 2px 0px 2px;
 	font-size: 28px;
 	color: #fff;
-	padding-top: 15px;
+	padding-top: 8px;
 }
 .active {
 	background: #ef784a;
@@ -81,12 +81,13 @@ a {
 #container {
 	width: 960px;
 	margin: auto;
+	padding-bottom: 30px;
 }
 
 /* Footer Properties */ 
-#footer {
+footer p {
 	margin-top: 25px;
-	font-size: 17px;
+	font-size: 13px;
 	text-align: center;
 	width: 100%;
 	color: #fff;

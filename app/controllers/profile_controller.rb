@@ -6,9 +6,9 @@ class ProfileController < ApplicationController
   	#@tempvar = Step.find_by_sql("SELECT * FROM steps, link_steps_users")
 
   	#RECUP TABLE JOINTURE PUIS PARCOURIR TOUT LES STEP EN FONCTION DE L'USER_ID
-  	@recupLink = LinkStepsUsers.find_by_sql("SELECT * FROM link_steps_users")
-
-  	#@mySteps =
+  	@recupLink = LinkStepsUsers.find_by_sql("SELECT * FROM link_steps_users WHERE user_id = #{current_user.id}")
+    
+  	@challenge_db = Challenge.find_by_sql("SELECT * FROM challenges") #AJOUTER LE WHERE
 
   end
   def list

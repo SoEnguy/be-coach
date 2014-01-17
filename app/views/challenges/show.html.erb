@@ -4,6 +4,7 @@
 		<img src="../assets/icon_deroule_gauche.png" alt="">
 		<span class="progress"><%= @challenge.progress_by_user current_user %></span><%= @challenge.name %></h1>
 	<h2><%= @challenge.text %></h2>
+	<p>Points du challenge: <%= @challenge.score_for_user current_user %></p>
 	<ul>
 		<% @challenge.steps.each do |step| %>
 			<li>

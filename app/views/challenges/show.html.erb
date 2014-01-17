@@ -6,8 +6,8 @@
 	<h2><%= @challenge.text %></h2>
 	<ul>
 		<% @challenge.steps.each do |step| %>
-			<li class="<% if step.done_by_user current_user %>done<% end %> forme">
-				<%= step.name %>
+			<li>
+				<%= link_to step.name, do_step_path(step) %>
 				<span class="count"><%= step.count_for_user current_user %></span>
 			</li>
 		<% end %>

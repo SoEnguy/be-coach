@@ -1,3 +1,91 @@
 // Place all the styles related to the Challenges controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#all {
+	width: 640px;
+	margin: auto;
+}
+#all li {
+	margin-left: -25px;
+}
+li {
+	list-style: none;
+}
+.forme {
+	width: 640px;
+	height: 70px;
+	margin-bottom: 3px;
+	font-size: 18px;
+	line-height: 70px;
+}
+.challenge {
+	background-color: #ef784a;
+	color: #fff;
+	font-size: 55px;
+	line-height: 30px;
+	position: relative;
+}
+.challenge img {
+	vertical-align: text-top;
+	margin-right: 20px;
+}
+.done {
+	background-color: #2aa48e;
+	color: #fff;
+}
+.done:before {
+	content: "";
+	height: 70px;
+	width: 45px;
+	background-image: url(icon_done.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	margin: 0px 30px;
+	float: left;
+}
+.todo {
+	background-color: #fff;
+	border-bottom: 2px solid #383838;
+}
+
+.todo:before{
+	content: "";
+	height: 70px;
+	width: 45px;
+	background-image: url(icon_todo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	margin: 0px 30px;
+	float: left;
+}
+.progress {
+	margin-right: 50px;
+	margin-left: 50px;
+	position: absolute;
+	top: 5px;
+}
+.progress:after {
+	content: "%";
+	font-size: 15px;
+	vertical-align: super;
+}
+.nameCha {
+	color: #383838;
+	font-size: 40px;
+	margin-left: 170px;
+	position: absolute;
+	top: 12px;
+}
+.nameCha:before {
+	content: url(icon_current.png);
+	margin-right: 30px;
+	display: inline-block;
+	vertical-align: -30%;
+}
+.challenge:after {
+	content: url(icon_deroule.png);
+	float: right;
+	margin-right: 15px;
+}

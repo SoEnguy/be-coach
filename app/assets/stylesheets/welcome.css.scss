@@ -46,3 +46,11 @@ p#orange {
 article {
 	margin-bottom: 50px;
 }
+
+@media screen and (max-width: 640px){
+	.ensemble p:first-child:before {
+	content: url(icon_FAQ.png);
+	}
+
+}
+

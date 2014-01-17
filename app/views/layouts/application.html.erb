@@ -9,7 +9,7 @@
 <body class="<%= controller.controller_name %> <%= controller.action_name %>">
 
 	<header id="app-header">
-		<img src="assets/logo_panda.png" alt="">
+		<img src="<%= asset_path 'logo_panda.png' %>" alt="">
 		<h1>BeCoach</h1>
 		<!-- <nav>
 			<ul>
@@ -32,8 +32,8 @@
 
 	<footer id="app-footer">
 		<div id="social">
-			<a href="http://twitter.com/BeCoachApp"><img src="assets/twitter.png"></a>
-			<a href="http://www.facebook.com/pages/BeCoach/1401844740060661"><img src="assets/facebook.png"></a>
+			<a href="http://twitter.com/BeCoachApp"><img src="<%= asset_path 'twitter.png' %>"></a>
+			<a href="http://www.facebook.com/pages/BeCoach/1401844740060661"><img src="<%= asset_path 'facebook.png' %>"></a>
 		</div>
 		<p>©BeCoach 2014 - Mentions Légales</p>
 	</footer>

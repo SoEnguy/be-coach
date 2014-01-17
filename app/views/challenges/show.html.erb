@@ -6,6 +6,10 @@
 
 <ul>
 	<% @challenge.steps.each do |step| %>
+		<% if current_user.step.where(id: step.id).map{|i| i.id}.any? %>
 		<li><%= link_to step.name, do_step_path(step) %></li>
+		<% else %>
+			<%= step.name %>
+		<% end %>
 	<% end %>
 </ul>

@@ -1,18 +1,13 @@
-<%= link_to 'Accueil', challenges_path %>
-
-<ul id="all">
-	 <li >
- 		<ul>
- 			<a href="#"><li class="challenge forme"><span class="progress">42</span><span class="nameCha"><%= @challenge.name %></span></li></a>
- 		</ul>
-		<ul class="listSteps">
-				<% @challenge.steps.each do |step| %>
-					<% if current_user.step.where(id: step.id).map{|i| i.id}.any? %>
-						<li class="done forme"><%= step.name %></li>
-					<%else%>
-						<li class="todo forme"><%= link_to step.name, do_step_path(step) %></li>
-					<%end%>			
-				<% end %>
-		</ul>
- 	</li>
-</ul>
+<div class="challenge-show">
+	<%= link_to 'Accueil', challenges_path %>
+	<h1><%= @challenge.name %></h1>
+	 <span class="progress"><%= @challenge.progress_by_user current_user %></span>
+	<ul>
+		<% @challenge.steps.each do |step| %>
+			<li class="<% if step.done_by_user current_user %>done<% end %>">
+				<%= step.name %>
+				<span class="count"><%= step.count_for_user current_user %></span>
+			</li>
+		<% end %>
+	</ul>
+</div>

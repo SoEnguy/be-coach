@@ -1,0 +1,47 @@
+.challenges 
+
+  &.index
+
+  &.show
+    header
+      position: relative
+      h1
+        margin-left: 30px
+        font-size: 35px
+        color: #383838
+      .back
+        position: absolute
+        top: 10px
+      p
+        margin-left: 30px
+    ul li
+      background-color: #fff
+      background-image: url(icon_todo.png)
+      background-repeat: no-repeat
+      background-position: 5px 5px
+      .name
+        margin-left: 60px
+      a
+        color: #383838
+      &.done
+        background-color: #2aa48e
+        color: #fff
+        background-image: url(icon_done.png)
+        a
+          color: #fff
+
+  .progress
+    margin-right: 50px
+    margin-left: 50px
+    top: 2px
+    font-size: 55px
+    &:after
+      content: "%"
+      font-size: 15px
+      vertical-align: super
+
+  @-moz-document url-prefix()
+    .progress
+      top: 2px
+      &:after
+        vertical-align: super

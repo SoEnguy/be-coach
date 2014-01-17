@@ -1,0 +1,45 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require reset
+ *= require_self
+ *= require_tree .
+ */
+
+// @import url(http://fonts.googleapis.com/css?family=Montserrat)
+
+body
+  background: #383838
+  margin: 0px
+  width: 100%
+
+h1, h2, h3, p, li, a
+  line-height: 150%
+  font-family: 'Montserrat', Arial, sans-serif
+
+a
+  text-decoration: none
+  color: black
+
+li
+  list-style: none
+  padding: 20px
+  border-bottom: 1px solid #ccc
+
+#app-page
+  background: #fff
+  width: 100%
+  padding-top: 20px
+  padding-bottom: 50px
+
+#container
+  width: 960px
+  margin: auto
+  padding-bottom: 30px

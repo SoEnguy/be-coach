@@ -1,17 +1,18 @@
+
 <% if !current_user %>
   <%= link_to "Connexion", auth_at_provider_path(:provider => :facebook) %>
 <% else %>
-<ul id="all">
+<ul>
   <!-- FIX CHALLENGES[] -->
   <p>Score total :<%= @challenges[0].score_all_challenge current_user %></p>
 
   <% @challenges.each do |challenge| %>
-  	<li>
-  		<ul>
-  			<li class="forme list-challenge challenge"><span class="progress"><%= challenge.progress_by_user current_user %></span><span class="nameCha"><%= link_to challenge.name, challenge %></span></li>
-        <%= challenge.progress_by_user current_user %>
-  		</ul>
-  	</li>
+	<li>
+		<span class="name"><%= link_to challenge.name, challenge %></span>
+		<span class="progress"><%= challenge.progress_by_user current_user %></span>
+		<span class="score"><%= challenge.score_for_user current_user %></span>
+	</li>
   <% end %>
 </ul>
+
 <% end %>

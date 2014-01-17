@@ -9,14 +9,18 @@
     <li id="challenge-<%= challenge.id %>">
     	<div class="texts">
     		<span class="name"><%= link_to challenge.name, challenge %></span>
-  			<span class="score"><%= challenge.score_for_user current_user %></span>	
+  			<span class="score"><%= challenge.score_for_user current_user %></span>
+  			<% if (challenge.started_by_user current_user) %>
+				<img src="assets/arrow_right_white.png" alt="">
+  			<% else %>
+				<img src="assets/arrow_right_grey.png" alt="">
+  			<% end %>	
     	</div>
     	<!-- Retourne true si le challenge est commencé, sinon false -->
       <% if (challenge.started_by_user current_user) %>
     	<div class="background"></div>
     	<div class="progress" style="right: 80%;"></div>
       <% end %>
-
   	</li>
 
     <% end %>

@@ -4,6 +4,7 @@ class ChallengesController < ApplicationController
   # GET /challenges.json
   def index
     @challenges = Challenge.all
+    @steps = Step.all
 
     respond_to do |format|
       format.html # index.html.erb

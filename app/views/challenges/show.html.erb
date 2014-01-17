@@ -1,5 +1,5 @@
 <%= link_to 'Accueil', challenges_path %>
-<<<<<<< HEAD
+
 <ul id="all">
 	 <li >
  		<ul>
@@ -7,23 +7,12 @@
  		</ul>
 		<ul class="listSteps">
 				<% @challenge.steps.each do |step| %>
-					<li class="done forme"><%= link_to step.name, do_step_path(step) %></li>
+					<% if current_user.step.where(id: step.id).map{|i| i.id}.any? %>
+						<li class="done forme"><%= step.name %></li>
+					<%else%>
+						<li class="todo forme"><%= link_to step.name, do_step_path(step) %></li>
+					<%end%>			
 				<% end %>
 		</ul>
  	</li>
-=======
-
-<h1><%= @challenge.name %></h1>
-
-<p><%= @challenge.text %></p>
-
-<ul>
-	<% @challenge.steps.each do |step| %>
-		<% if current_user.step.where(id: step.id).map{|i| i.id}.any? %>
-		<li><%= link_to step.name, do_step_path(step) %></li>
-		<% else %>
-			<%= step.name %>
-		<% end %>
-	<% end %>
->>>>>>> 805d147e43324e72fe0aba1987cacbf634d2edd0
 </ul>

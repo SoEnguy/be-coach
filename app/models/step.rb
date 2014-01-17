@@ -26,4 +26,28 @@ class Step < ActiveRecord::Base
   	end
   	count
   end
+
+  def progress user
+  	progress_return =0
+  	self.users.uniq.each do |u|
+	  	if u == user
+	  		progress_return +=1
+	  	end
+  	end
+  	progress_return
+  end
+
+  def score user
+  	count = 0
+  	expo = 5
+  	self.users.each do |u|
+  		if user == u
+  			count += expo
+  			if expo != 1
+  				expo -= 1
+  			end
+  		end
+  	end
+  	count
+  end
 end

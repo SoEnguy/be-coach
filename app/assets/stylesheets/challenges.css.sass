@@ -7,6 +7,24 @@
     ul
       li
         font-size: 30px
+        border-bottom: 1px solid #383838
+        position: relative
+        .texts 
+          position: relative
+          z-index: 100
+          span
+            z-index: 100
+        .progress, .background
+          z-index: 1
+          position: absolute
+          background-color: red
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+        .progress
+          background-color: blue
+          right: 80%
 
   &.show
     header
@@ -35,16 +53,15 @@
         background-image: url(icon_done.png)
         a
           color: #fff
-
-  .progress
-    font-size: 50px
-    &:after
-      content: "%"
-      font-size: 15px
-      vertical-align: super
-
-  @-moz-document url-prefix()
     .progress
-      top: 2px
+      font-size: 50px
       &:after
+        content: "%"
+        font-size: 15px
         vertical-align: super
+
+    @-moz-document url-prefix()
+      .progress
+        top: 2px
+        &:after
+          vertical-align: super

@@ -1,13 +1,12 @@
 <% if !current_user %>
   <%= link_to "Connexion", auth_at_provider_path(:provider => :facebook) %>
 <% else %>
-<ul id="all">
+<ul>
   <% @challenges.each do |challenge| %>
-  	<li>
-  		<ul>
-  			<li class="forme list-challenge challenge"><span class="progress">42</span><span class="nameCha"><%= link_to challenge.name, challenge %></span></li>
-  		</ul>
-  	</li>
+	<li>
+		<span class="name"><%= link_to challenge.name, challenge %></span>
+		<span class="progress">42</span>
+	</li>
   <% end %>
 </ul>
 <% end %>

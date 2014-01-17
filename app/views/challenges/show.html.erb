@@ -1,15 +1,13 @@
-<div class="challenge-show">
-	<%= link_to 'Accueil', challenges_path %>
-	<h1 class="forme challenge">
-		<img src="../assets/icon_deroule_gauche.png" alt="">
-		<span class="progress"><%= @challenge.progress_by_user current_user %></span><%= @challenge.name %></h1>
-	<h2><%= @challenge.text %></h2>
-	<ul>
-		<% @challenge.steps.each do |step| %>
-			<li>
-				<%= link_to step.name, do_step_path(step) %>
-				<span class="count"><%= step.count_for_user current_user %></span>
-			</li>
-		<% end %>
-	</ul>
-</div>
+<%= link_to 'Accueil', challenges_path %>
+<h1>
+	<img src="../assets/icon_deroule_gauche.png" alt="">
+	<span class="progress"><%= @challenge.progress_by_user current_user %></span><%= @challenge.name %></h1>
+<h2><%= @challenge.text %></h2>
+<ul>
+	<% @challenge.steps.each do |step| %>
+		<li>
+			<%= link_to step.name, do_step_path(step) %>
+			<span class="count"><%= step.count_for_user current_user %></span>
+		</li>
+	<% end %>
+</ul>

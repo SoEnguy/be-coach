@@ -1,11 +1,11 @@
 <% if !current_user %>
   <%= link_to "Connexion", auth_at_provider_path(:provider => :facebook) %>
 <% else %>
+	<h1>Score total : 242pts</h1>
 <ul>
   <% @challenges.each do |challenge| %>
 	<li>
 		<span class="name"><%= link_to challenge.name, challenge %></span>
-		<span class="progress"><%= challenge.progress_by_user current_user %></span>
 		<span class="score">12</span>
 	</li>
   <% end %>

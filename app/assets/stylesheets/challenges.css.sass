@@ -4,26 +4,48 @@
     h1
       font-size: 30px
       margin-left: 20px
+      margin-bottom: 15px
+      span
+        float: right
+        margin-right: 50px
     ul
       li
         font-size: 30px
-        border-bottom: 1px solid #383838
+        border-bottom: 1px solid #2aa48e
         position: relative
         .texts 
           position: relative
           z-index: 100
+          .score-image
+            float: right
+            img
+              margin-left: 25px
+              margin-right: 10px
+              vertical-align: middle
         .progress, .background
           z-index: 1
           position: absolute
-          background-color: red
+          background-color: #2aa48e
           top: 0
           left: 0
           right: 0
           bottom: 0
         .progress
-          background-color: blue
-        img 
-          float: right
+          background-color: #168786
+      .started
+        color: #fff
+        a 
+          color: #fff
+      .score
+        font-size: 30px
+        &:after
+          content: " pts"
+          vertical-align: baseline
+          font-size: 15px
+
+
+
+
 
   &.show
     header

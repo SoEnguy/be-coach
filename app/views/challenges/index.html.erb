@@ -1,22 +1,22 @@
 <% if !current_user %>
   <%= link_to "Connexion", auth_at_provider_path(:provider => :facebook) %>
 <% else %>
-<h1>Score total :<%= @challenges[0].score_all_challenge current_user %>pts</h1>
+<h1>Score total : <span><%= @challenges[0].score_all_challenge current_user %> points</span></h1>
 <ul>
-  <!-- FIX CHALLENGES[] -->
   <% @challenges.each do |challenge| %>
   	<% if !challenge.steps.empty? %>
-    <li id="challenge-<%= challenge.id %>">
+    <li id="challenge-<%= challenge.id %>" class="<% if (challenge.started_by_user current_user) %>started<% end %>">
     	<div class="texts">
     		<span class="name"><%= link_to challenge.name, challenge %></span>
-  			<span class="score"><%= challenge.score_for_user current_user %></span>
-  			<% if (challenge.started_by_user current_user) %>
-				<img src="assets/arrow_right_white.png" alt="">
-  			<% else %>
-				<img src="assets/arrow_right_grey.png" alt="">
-  			<% end %>	
+			<div class="score-image">
+	  			<span class="score"><%= challenge.score_for_user current_user %></span>
+	  			<% if (challenge.started_by_user current_user) %>
+					<img src="assets/arrow_right_white.png" alt="">
+	  			<% else %>
+					<img src="assets/arrow-right_grey.png" alt="">
+	  			<% end %>
+			</div>
     	</div>
-    	<!-- Retourne true si le challenge est commencé, sinon false -->
       <% if (challenge.started_by_user current_user) %>
       	<div class="background"></div>
       	<div class="progress" style="right:<%= 100-(challenge.progress_by_user current_user) %>%;"></div>

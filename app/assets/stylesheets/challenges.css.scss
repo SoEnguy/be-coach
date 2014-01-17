@@ -73,12 +73,21 @@ a {
 	margin-right: 50px;
 	margin-left: 50px;
 	position: absolute;
-	top: 5px;
+	top: 2px;
+}
+@-moz-document url-prefix()
+{
+    .progress {
+        top: 2px;
+    }
+    .progress:after {
+    	vertical-align: super;
+    }
 }
 .progress:after {
 	content: "%";
 	font-size: 15px;
-	vertical-align: super;
+	vertical-align: text-top;
 }
 .nameCha {
 	color: #383838;

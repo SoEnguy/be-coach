@@ -12,7 +12,10 @@
   		<span class="name"><%= link_to challenge.name, challenge %></span>
   		<span class="progress"><%= challenge.progress_by_user current_user %></span>
   		<span class="score"><%= challenge.score_for_user current_user %></span>
+      <!-- Retourne true si le challenge est commencé, sinon false -->
+      <%= challenge.started_by_user current_user %>
   	</li>
+
     <% end %>
   <% end %>
 </ul>

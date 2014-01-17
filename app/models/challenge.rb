@@ -34,4 +34,12 @@ class Challenge < ActiveRecord::Base
   	end
   	total_all
   end
+
+  def started_by_user user
+  	started = false
+  	if (progress_by_user user) > 0
+  		started = true
+  	end
+  	started
+  end
 end

@@ -1,7 +1,7 @@
 <% if !current_user %>
   <%= link_to "Connexion", auth_at_provider_path(:provider => :facebook) %>
 <% else %>
-<h1>Score total : <span><%= @challenges[0].score_all_challenge current_user %> points</span></h1>
+<h1>Score total <span><%= @challenges[0].score_all_challenge current_user %> points</span></h1>
 <ul>
   <% @challenges.each do |challenge| %>
   	<% if !challenge.steps.empty? %>

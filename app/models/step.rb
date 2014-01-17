@@ -2,7 +2,7 @@ class Step < ActiveRecord::Base
   resourcify
   belongs_to :challenge
   has_and_belongs_to_many :users
-  attr_accessible :id, :name, :text, :challenge_id
+  attr_accessible :id, :name, :text, :challenge_id, :score
 
   #TODO : Current_user not accessible from model
   def done
@@ -37,17 +37,13 @@ class Step < ActiveRecord::Base
   	progress_return
   end
 
-  def score user
+  def score_by_step user
   	count = 0
-  	expo = 5
-  	self.users.each do |u|
-  		if user == u
-  			count += expo
-  			if expo != 1
-  				expo -= 1
-  			end
-  		end
-  	end
+    self.users.each do |u|
+      if user == u
+        count += self.score
+      end
+    end
   	count
   end
 end

@@ -18,9 +18,10 @@ class Challenge < ActiveRecord::Base
 
   def score_for_user user
   	total = 0
-  	self.steps.each do |s|
-  		total += s.score user
-  	end
+  	
+    self.steps.each do |s|
+      total += s.score_by_step user  
+    end
   	total
   end
 

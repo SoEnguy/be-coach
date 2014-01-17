@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   validates :username, uniqueness: true
   validates :email, uniqueness: true
 
-  has_and_belongs_to_many :step
+  has_and_belongs_to_many :steps
 
   has_many :authentications, :dependent => :destroy
   accepts_nested_attributes_for :authentications

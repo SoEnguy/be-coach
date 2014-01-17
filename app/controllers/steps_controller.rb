@@ -13,7 +13,7 @@ class StepsController < ApplicationController
   def do
     @step = Step.find(params[:id])
 
-    current_user.step << @step
+    current_user.steps << @step
 
     redirect_to challenge_path(@step.challenge)
   end

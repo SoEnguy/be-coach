@@ -5,7 +5,7 @@
 	<ul>
 		<% @challenge.steps.each do |step| %>
 			<li class="<% if step.done_by_user current_user %>done<% end %>">
-				<%= step.name %>
+				<%= link_to step.name, do_step_path(step) %>
 				<span class="count"><%= step.count_for_user current_user %></span>
 			</li>
 		<% end %>

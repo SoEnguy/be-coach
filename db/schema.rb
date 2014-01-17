@@ -13,8 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20140117010753) do
 
- create_table "authentications", :force => true do |t|
-
+  create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
     t.string   "provider",   :null => false
     t.string   "uid",        :null => false
@@ -28,6 +27,18 @@ ActiveRecord::Schema.define(:version => 20140117010753) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "link_steps_users", :force => true do |t|
+    t.integer "user_id"
+    t.integer "step_id"
+    t.integer "challenge_id"
+    t.boolean "isComplete"
+  end
+
+  add_index "link_steps_users", ["challenge_id"], :name => "index_link_steps_users_on_challenge_id"
+  add_index "link_steps_users", ["isComplete"], :name => "index_link_steps_users_on_isComplete"
+  add_index "link_steps_users", ["step_id"], :name => "index_link_steps_users_on_step_id"
+  add_index "link_steps_users", ["user_id"], :name => "index_link_steps_users_on_user_id"
 
   create_table "roles", :force => true do |t|
     t.string   "name"

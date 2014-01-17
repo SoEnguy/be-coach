@@ -1,12 +1,14 @@
-<%= link_to 'Accueil', challenges_path %>
-<h1>
-	<img src="../assets/icon_deroule_gauche.png" alt="">
-	<span class="progress"><%= @challenge.progress_by_user current_user %></span><%= @challenge.name %></h1>
-<h2><%= @challenge.text %></h2>
+
+<header>
+	<h1><%= @challenge.name %></h1>
+	<p><%= @challenge.text %></p>
+	<p class="progress"><%= @challenge.progress_by_user current_user %></p>
+	<%= link_to image_tag('icon_deroule_gauche.png'), challenges_path, :class => 'back' %>
+</header>
 <ul>
 	<% @challenge.steps.each do |step| %>
-		<li>
-			<%= link_to step.name, do_step_path(step) %>
+		<li<% if step.done_by_user current_user %> class="done"<% end %>>
+			<span class="name"><%= link_to step.name, do_step_path(step) %></span>
 			<span class="count"><%= step.count_for_user current_user %></span>
 		</li>
 	<% end %>

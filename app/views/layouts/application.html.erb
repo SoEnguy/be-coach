@@ -8,7 +8,7 @@
 </head>
 <body class="<%= controller.controller_name %> <%= controller.action_name %>">
 
-	<header>
+	<header id="app-header">
 		<h1>BeCoach</h1>
 		<!-- <nav>
 			<ul>
@@ -23,13 +23,13 @@
 		</nav> -->
 	</header>
 
-	<div id="main">
+	<div id="app-page">
 		<div id="container">
 			<%= yield %>
 		</div>
 	</div>
 
-	<footer>
+	<footer id="app-footer">
 		<p>©BeCoach 2014 - Mentions Légales</p>
 		<div id="social">
 			<a href="#"><img src="assets/twitter.png"></a>

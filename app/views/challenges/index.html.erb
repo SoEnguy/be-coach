@@ -5,7 +5,8 @@
   <% @challenges.each do |challenge| %>
 	<li>
 		<span class="name"><%= link_to challenge.name, challenge %></span>
-		<span class="progress">42</span>
+		<span class="progress"><%= challenge.progress_by_user current_user %></span>
+		<span class="score">12</span>
 	</li>
   <% end %>
 </ul>

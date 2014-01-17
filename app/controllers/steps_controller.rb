@@ -10,6 +10,16 @@ class StepsController < ApplicationController
     end
   end
 
+  def do
+    @step = Step.find(params[:id])
+
+    #current_user.step << @step
+    time = Time.now.to_i
+    sql = "INSERT INTO users_steps VALUES (#{current_user.id},#{@step.id},#{time},#{time}, 1)"
+    result = ActiveRecord::Base.connection.execute(sql)
+
+    redirect_to challenge_path(@step.challenge)
+  end
   # GET /steps/1
   # GET /steps/1.json
   def show

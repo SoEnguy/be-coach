@@ -9,6 +9,8 @@ BeCoach::Application.routes.draw do
   get "oauths/logout" => "oauths#logout"
   get "oauths/:provider" => "oauths#oauth", :as => :auth_at_provider
 
+  get "steps/:id/do", to: "steps#do", as: 'do_step'
+
   #get "/list_challenge" => 'list_challenge#list_challenge'
   #get "/FAQ" => 'welcome#FAQ'
   #get "/myprofile" => "profile#myprofile"

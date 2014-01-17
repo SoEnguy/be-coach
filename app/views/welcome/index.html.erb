@@ -1,3 +1,10 @@
+<% if !current_user %>
+	<%= link_to "Connexion", auth_at_provider_path(:provider => :facebook) %>
+<% else %>
+	<% redirect_to challenge_path %>
+<% end %>
+
+
 <h2>Devenez votre propre coach !</h2>
 <p id="mascotte">
 	<img src="assets/pandacoach.png">

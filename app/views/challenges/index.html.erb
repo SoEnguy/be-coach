@@ -3,22 +3,11 @@
 <% else %>
 <ul id="all">
   <% @challenges.each do |challenge| %>
-    <li><%= link_to challenge.name, challenge %></li>
-  <% end %>
-<<<<<<< HEAD
-=======
-
- 	<li>
- 		<ul>
- 			<a href="#"><li class="challenge forme"><span class="progress">42</span><span class="nameCha">Be a jogger</span></li></a>
- 		</ul>
-		<ul class="listSteps">
-			<li class="done forme">Step 1 : Courir un peu</li>
-			<li class="done forme">Step 2 : Courir plus</li>
-			<li class="todo forme">Step 3 : Courir durée</li>
-			<li class="todo forme">Step 4 : Courir test</li>
+	<li>
+		<ul>
+			<li class="forme challenge"><span class="progress">42</span><span class="nameCha"><%= link_to challenge.name, challenge %></span></li>
 		</ul>
- 	</li>
->>>>>>> 805d147e43324e72fe0aba1987cacbf634d2edd0
+	</li>
+  <% end %>
 </ul>
 <% end %>

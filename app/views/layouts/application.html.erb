@@ -9,7 +9,8 @@
 <body class="<%= controller.controller_name %> <%= controller.action_name %>">
 
 	<header id="app-header">
-		<h1>BeCoach</h1>
+		
+		<h1><img src="<%= asset_path 'logo_panda.png' %>" alt=""> BeCoach</h1>
 		<!-- <nav>
 			<ul>
 				<li><div class="active onglet" id="home"><%= link_to('Home', 'Home') %></div></li>
@@ -30,11 +31,11 @@
 	</div>
 
 	<footer id="app-footer">
-		<p>©BeCoach 2014 - Mentions Légales</p>
 		<div id="social">
-			<a href="#"><img src="assets/twitter.png"></a>
-			<a href="#"><img src="assets/facebook.png"></a>
+			<a href="http://twitter.com/BeCoachApp"><img src="<%= asset_path 'twitter.png' %>"></a>
+			<a href="http://www.facebook.com/pages/BeCoach/1401844740060661"><img src="<%= asset_path 'facebook.png' %>"></a>
 		</div>
+		<p>©BeCoach 2014 - Mentions Légales</p>
 	</footer>
 
 </body>

@@ -1,7 +1,23 @@
 <% if !current_user %>
-  <%= link_to "Connexion", auth_at_provider_path(:provider => :facebook) %>
+
+
+<h2>Devenez votre propre coach !</h2>
+<p id="mascotte">
+  <img src="assets/pandacoach.png">
+</p>
+
+<div id="presentation">
+  <p>BeCoach est une application qui vous permet </br>
+  d'accéder à une liste de challenges à réaliser parmi </br> un grand nombre de thèmes différents. </p>
+  <p id="orange">Accomplissez des défis, essayez vous à de nouveaux </br> hobbies et partagez vos succès sur Facebook pour </br> impressionner vos amis. </p>
+  <p>BeCoach, une application simple et efficace pour </br>
+  améliorer votre vie.</p>
+</div>
+
+<div class="connect"><%= link_to "Connexion via Facebook", auth_at_provider_path(:provider => :facebook) %></div>
+
 <% else %>
-<h1>Score total : <span><%= @challenges[0].score_all_challenge current_user %> points</span></h1>
+<h1>Score total <span><%= @challenges[0].score_all_challenge current_user %> points</span></h1>
 <ul>
   <% @challenges.each do |challenge| %>
   	<% if !challenge.steps.empty? %>

@@ -1,4 +1,5 @@
 <%= link_to 'Accueil', challenges_path %>
+<<<<<<< HEAD
 <ul id="all">
 	 <li >
  		<ul>
@@ -10,4 +11,19 @@
 				<% end %>
 		</ul>
  	</li>
+=======
+
+<h1><%= @challenge.name %></h1>
+
+<p><%= @challenge.text %></p>
+
+<ul>
+	<% @challenge.steps.each do |step| %>
+		<% if current_user.step.where(id: step.id).map{|i| i.id}.any? %>
+		<li><%= link_to step.name, do_step_path(step) %></li>
+		<% else %>
+			<%= step.name %>
+		<% end %>
+	<% end %>
+>>>>>>> 805d147e43324e72fe0aba1987cacbf634d2edd0
 </ul>

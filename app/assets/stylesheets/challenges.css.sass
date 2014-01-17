@@ -61,7 +61,7 @@
         margin-left: 30px
     ul li
       background-color: #fff
-      background-image: url(icon_todo.png)
+      background-image: url(icon-decoche.png)
       background-repeat: no-repeat
       background-position: 5px 5px
       .name
@@ -74,6 +74,13 @@
         background-image: url(icon_done.png)
         a
           color: #fff
+      .count
+        float: right
+        font-size: 30px
+        &:after
+          content: " pts"
+          vertical-align: baseline
+          font-size: 15px
     .progress
       font-size: 50px
       &:after

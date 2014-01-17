@@ -6,11 +6,6 @@ class ChallengesController < ApplicationController
     @challenges = Challenge.all
     @steps = Step.all
 
-    @steps.each do |step|
-      step.score = 1
-      step.save
-    end
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @challenges }

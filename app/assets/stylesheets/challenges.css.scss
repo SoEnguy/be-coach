@@ -11,6 +11,9 @@
 li {
 	list-style: none;
 }
+a {
+	text-decoration: none;
+}
 .forme {
 	width: 640px;
 	height: 70px;
@@ -44,11 +47,13 @@ li {
 	margin: 0px 30px;
 	float: left;
 }
+.done a {
+	color: #fff;
+}
 .todo {
 	background-color: #fff;
 	border-bottom: 2px solid #383838;
 }
-
 .todo:before{
 	content: "";
 	height: 70px;
@@ -59,6 +64,9 @@ li {
 	position: relative;
 	margin: 0px 30px;
 	float: left;
+}
+.todo a {
+	color: #383838;
 }
 .progress {
 	margin-right: 50px;

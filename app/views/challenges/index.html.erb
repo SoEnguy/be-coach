@@ -11,7 +11,7 @@
 			<div class="score-image">
 	  			<span class="score"><%= challenge.score_for_user current_user %></span>
 	  			<% if (challenge.started_by_user current_user) %>
-					<img src="assets/arrow_right_white.png" alt="">
+	  			<%= link_to image_tag('arrow_right_white.png'), challenge %>
 	  			<% else %>
 					<img src="assets/arrow-right_grey.png" alt="">
 	  			<% end %>

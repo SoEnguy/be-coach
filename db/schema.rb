@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140117142107) do
+ActiveRecord::Schema.define(:version => 20140117145846) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -43,9 +43,9 @@ ActiveRecord::Schema.define(:version => 20140117142107) do
     t.string   "name"
     t.string   "text"
     t.integer  "challenge_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.integer  "score"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.integer  "score",        :default => 1
   end
 
   add_index "steps", ["challenge_id"], :name => "index_steps_on_challenge_id"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140117000602) do
+ActiveRecord::Schema.define(:version => 20140117010753) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -27,18 +27,6 @@ ActiveRecord::Schema.define(:version => 20140117000602) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  create_table "link_steps_users", :force => true do |t|
-    t.integer "user_id"
-    t.integer "step_id"
-    t.integer "challenge_id"
-    t.boolean "isComplete"
-  end
-
-  add_index "link_steps_users", ["challenge_id"], :name => "index_link_steps_users_on_challenge_id"
-  add_index "link_steps_users", ["isComplete"], :name => "index_link_steps_users_on_isComplete"
-  add_index "link_steps_users", ["step_id"], :name => "index_link_steps_users_on_step_id"
-  add_index "link_steps_users", ["user_id"], :name => "index_link_steps_users_on_user_id"
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -61,6 +49,11 @@ ActiveRecord::Schema.define(:version => 20140117000602) do
 
   add_index "steps", ["challenge_id"], :name => "index_steps_on_challenge_id"
 
+  create_table "steps_users", :id => false, :force => true do |t|
+    t.integer "user_id"
+    t.integer "step_id"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "username",                   :null => false
     t.string   "email"
@@ -82,13 +75,5 @@ ActiveRecord::Schema.define(:version => 20140117000602) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
-
-  create_table "users_steps", :id => false, :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "step_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.boolean  "done"
-  end
 
 end

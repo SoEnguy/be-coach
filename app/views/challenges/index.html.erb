@@ -13,8 +13,8 @@
     	</div>
     	<!-- Retourne true si le challenge est commencé, sinon false -->
       <% if (challenge.started_by_user current_user) %>
-    	<div class="background"></div>
-    	<div class="progress" style="right: 80%;"></div>
+      	<div class="background"></div>
+      	<div class="progress" style="right:<%= 100-(challenge.progress_by_user current_user) %>%;"></div>
       <% end %>
 
   	</li>
